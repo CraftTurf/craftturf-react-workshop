@@ -1,8 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import renderer from 'react-test-renderer';
+import MainCounter from './components/Counter/MainCounter';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+describe('<MainCounter/>', () => {
+  it(' should render Snapshot', () => {
+    const component = renderer.create(
+      <MainCounter />
+    );
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    tree.props.onClick;
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    tree.props.children;
+    tree = components.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

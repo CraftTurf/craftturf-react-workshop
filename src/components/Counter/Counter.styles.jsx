@@ -1,16 +1,16 @@
 import { StyleSheet } from 'aphrodite';
 
-const CounterStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   button: {
-    margin: '10',
+    margin: '10px',
     backgroundColor: '#ff0000',
     color: '#fff',
-    fontSize: '16',
-    width: '100',
-    height: '40',
+    fontSize: '16px',
+    width: '100px',
+    height: '40px',
     border: 'none',
     cursor: 'pointer',
   }
 });
 
-export default CounterStyles;
+export default styles;
