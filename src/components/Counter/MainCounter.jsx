@@ -19,14 +19,14 @@ export default class MainCounter extends React.Component
     return(
       <div>
         <p>{this.state.count}</p>
-      <Counter onClick={this.handleClickIncrement}>
-        {'Increment'}
-      </Counter>
+        <Counter onClick={this.handleClickIncrement}>
+          {'Increment'}
+        </Counter>
 
-      <Counter onClick={this.handleClickDecrement}>
-        {'Decrement'}
-      </Counter>
-    </div>
+        <Counter onClick={this.handleClickDecrement}>
+          {'Decrement'}
+        </Counter>
+      </div>
     );
   }
 
