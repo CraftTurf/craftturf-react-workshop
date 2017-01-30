@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { css } from 'aphrodite';
-importstyles from './Counter.styles'
+import styles from './Counter.styles'
 
 const Counter = ({ onClick, children }) => {
   return(
@@ -19,8 +19,8 @@ Counter.defaultProps = {
 }
 
 Counter.PropTypes = {
-  onClick: React.PropTypes.Func,
-  children: React.Proptypes.string
+  onClick: React.PropTypes.func,
+  children: React.PropTypes.node,
 }
 
 export default Counter;
