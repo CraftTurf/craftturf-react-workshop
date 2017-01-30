@@ -33,3 +33,39 @@ exports[`<MainCounter/>  should render Snapshot 2`] = `
   </button>
 </div>
 `;
+
+exports[`<MainCounter/>  should render Snapshot of MainCounter 1`] = `
+<div>
+  <p>
+    0
+  </p>
+  <button
+    className="button_1m86zok"
+    onClick={[Function]}>
+    Increment
+  </button>
+  <button
+    className="button_1m86zok"
+    onClick={[Function]}>
+    Decrement
+  </button>
+</div>
+`;
+
+exports[`<MainCounter/>  should render Snapshot of MainCounter 2`] = `
+<div>
+  <p>
+    0
+  </p>
+  <button
+    className="button_1m86zok"
+    onClick={[Function]}>
+    Increment
+  </button>
+  <button
+    className="button_1m86zok"
+    onClick={[Function]}>
+    Decrement
+  </button>
+</div>
+`;
