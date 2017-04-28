@@ -7,7 +7,7 @@ const buttonWhite = {
   fontSize: '1.5rem',
   border: '1px solid #000',
   display: 'table',
-  margin: '50% auto',
+  margin: '0 auto',
   whiteSpace: 'nowrap',
 };
 
