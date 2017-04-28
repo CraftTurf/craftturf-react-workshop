@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MainCounter from './components/Counter/MainCounter'
+import { HelloButtonJSX }  from './components/HelloButton/HelloButton'
 
 class App extends Component {
   render() {
@@ -9,15 +9,15 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React Tutorials --- Demos</h2>
+          <h2>Welcome to Get Reactive --- Demo</h2>
         </div>
         <hr />
         <div className="App-intro">
-          <h3>Demo 1</h3>
-          <h4>Counter -- Increment and Decrement</h4>
-          <em>This component is in src/components/counter</em>
+          <h3>Demo</h3>
+          <em>This component is in src/components/HelloButton</em>
+          <br /><br />
+          <HelloButtonJSX >Click me </HelloButtonJSX>
         </div>
-        <MainCounter />
         <hr />
       </div>
     );

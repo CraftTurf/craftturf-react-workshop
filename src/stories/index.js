@@ -1,36 +1,45 @@
-import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
-import Button from './Button';
-import Welcome from './Welcome';
-import MainCounter from '../components/Counter/MainCounter'
-import Textbox from '../components/Textbox/Textbox';
-import Search from '../components/Search/Search';
-import SearchFixtures from '../components/Search/Search.fixtures';
+import * as React from 'react';
+import { storiesOf } from '@kadira/storybook';
 
-storiesOf('Welcome', module)
-  .add('to Storybook', () => (
-    <Welcome showApp={linkTo('Button')}/>
-  ));
+import { HelloButtonPure, HelloButtonJSX } from '../components/HelloButton/HelloButton';
+import firstClass, { A, B } from '../components/Functional/firstClass';
+import add from '../components/Functional/higherOrder';
+import Profiles, {
+  profileItemsWithFilter,
+  profilesDataWithReducer
+} from '../components/Profiles/Profiles';
 
-storiesOf('Button', module)
-  .add('with text', () => (
-    <Button onClick={action('clicked')}>Hello Button</Button>
+storiesOf('Profiles', module)
+  .add('.map()', () => (
+      <div>{Profiles}</div>
   ))
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
+  .add('.filter().map()', () => (
+      <div>{profileItemsWithFilter}</div>
+  ))
+  .add('.filter().map().reduce()', () => (
+      <code>{JSON.stringify(profilesDataWithReducer, null)}</code>
+  ));
+
+storiesOf('Hello Button', module)
+  .add('JSX', () => (
+    <HelloButtonJSX>
+      Click me
+    </HelloButtonJSX>
+  ))
+
+  .add('Pure', () => (
+    <HelloButtonPure>
+      Click me
+    </HelloButtonPure>
   ));
 
 
-  storiesOf('Counter', module)
-    .add('default', () => (
-      <MainCounter />
-    ));
-  storiesOf('Textbox', module)
-    .add('default', () => (
-      <Textbox />
-    ));
-
-    storiesOf('Search Box', module)
-      .add('default', () => (
-        <Search list={SearchFixtures}/>
-      ));
+storiesOf('JS supports...', module)
+  .add('first class function', () => (
+      <div>{firstClass}</div>
+  ))
+  .add('higher order function', () => {
+    const myFunc = () => 3;
+    const sum = add(A)(B);
+    return <div>{sum}</div>;
+  });
