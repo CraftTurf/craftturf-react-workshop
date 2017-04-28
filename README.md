@@ -1,3 +1,6 @@
+# 🚀  Craft Turf Get Reactive Workshop
+
+Follow the instructions below to setup the workshop exercises.
 
 ## Setup the project for development
 
@@ -9,13 +12,15 @@
     npm run storybook
 
 
-# 🚀  Project Exercises
+## 🚀  Project Exercises
 
+```
 ├─ src
     |- components
         ├─ HelloButton      React pure and JSX
         ├─ Profiles         Data and View
         └─ Functional       Functional programming basics
+```
 
 
 
